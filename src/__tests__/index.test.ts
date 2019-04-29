@@ -32,7 +32,7 @@ describe('AsyncEventEmitter', () => {
       emitter.once(T_EVENTS.TEST, spy);
       emitter.offOnce(T_EVENTS.TEST, spy);
       await emitter.emit(T_EVENTS.TEST, true);
-      expect(spy).toHaveBeenCalledWith(true);
+      expect(spy).not.toHaveBeenCalled();
     });
 
   });
@@ -58,7 +58,7 @@ describe('AsyncEventEmitter', () => {
       emitter.on(T_EVENTS.TEST, spy);
       emitter.off(T_EVENTS.TEST, spy);
       await emitter.emit(T_EVENTS.TEST, true);
-      expect(spy).toHaveBeenCalledWith(true);
+      expect(spy).not.toHaveBeenCalled();
     });
   });
 
@@ -69,7 +69,7 @@ describe('AsyncEventEmitter', () => {
          const emitter: IAsyncEventEmitter<T_EVENTS> = new AsyncEventEmitter();
          const spy                                   = jest.fn();
          emitter.on(T_EVENTS.TEST, spy);
-         expect(emitter.on(T_EVENTS.TEST, spy))
+         expect(() => emitter.on(T_EVENTS.TEST, spy))
            .toThrow(ERROR_MESSAGES.DUPLICATE_CALLBACK);
        });
     it('calls the callback when the event is emitted that it is registered for',
@@ -121,7 +121,7 @@ describe('AsyncEventEmitter', () => {
          const emitter: IAsyncEventEmitter<T_EVENTS> = new AsyncEventEmitter();
          const spy                                   = jest.fn();
          emitter.once(T_EVENTS.TEST, spy);
-         expect(emitter.on(T_EVENTS.TEST, spy))
+         expect(() => emitter.once(T_EVENTS.TEST, spy))
            .toThrow(ERROR_MESSAGES.DUPLICATE_CALLBACK);
        });
     it('calls the callback when the event is emitted that it is registered for',
