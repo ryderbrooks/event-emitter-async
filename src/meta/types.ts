@@ -1,0 +1,1 @@
+export type tEventCB = ( ...args: any[] ) => void;
