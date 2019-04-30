@@ -1,6 +1,5 @@
 import { AsyncEventEmitter }  from '../lib/AsyncEventEmitter';
 import { IAsyncEventEmitter } from '../meta/interfaces';
-import { ERROR_MESSAGES }     from '../meta/enums';
 
 
 describe('AsyncEventEmitter', () => {
