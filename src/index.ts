@@ -1,1 +1,1 @@
-throw new Error('Not implemented');
+export { AsyncEventEmitter } from './lib/AsyncEventEmitter';
