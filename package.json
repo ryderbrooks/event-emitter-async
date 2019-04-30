@@ -1,5 +1,9 @@
 {
   "name": "@ryder_brooks/event-emitter-async",
+  "engines": {
+    "node": ">=11.3.0",
+    "npm": ">=6.0.0"
+  },
   "version": "0.0.5",
   "description": "",
   "main": "dist/index.js",

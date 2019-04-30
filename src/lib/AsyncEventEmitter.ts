@@ -1,7 +1,6 @@
 import { tEventCB }           from '../meta/types';
 import { IAsyncEventEmitter } from '../meta/interfaces';
 import { IPopSet, PopSet }    from 'pop-set';
-import { ERROR_MESSAGES }     from '../meta/enums';
 
 
 

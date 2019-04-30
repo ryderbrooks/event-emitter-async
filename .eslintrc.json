@@ -15,6 +15,7 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
+
   "parserOptions": {
     "project": "./tsconfig.json",
     "ecmaVersion": 2018,
@@ -48,6 +49,15 @@
     "@typescript-eslint/interface-name-prefix": "off"
   },
   "overrides": [
+    {
+      "files": [
+        "**/*.ts"
+      ],
+      "parser": "@typescript-eslint/parse",
+      "rules": {
+        "no-undef": "off"
+      }
+    },
     {
       "files": [
         "**/*.md"

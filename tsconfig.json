@@ -16,6 +16,9 @@
     "extendedDiagnostics": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
+    "allowJs": true,
+    "declarationMap": true,
+    "checkJs": true,
     "rootDir": "./src",
     "declaration": true,
     "typeRoots": [
