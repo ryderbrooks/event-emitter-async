@@ -53,7 +53,6 @@
       "files": [
         "**/*.ts"
       ],
-      "parser": "@typescript-eslint/parse",
       "rules": {
         "no-undef": "off"
       }
